@@ -5,6 +5,10 @@ $('#myonoffswitch').on('click', function (e) {
         console.log('disable');
         
     }
+    
+    chrome.runtime.sendMessage({greeting: "Hey, You should enable Festivus Mode now!"}, function (response) {
+        console.log(response.farewell);
+    });
 });
     
     
